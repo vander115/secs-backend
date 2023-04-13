@@ -26,7 +26,7 @@ D - DELETE
 import 'express-async-errors';
 import express from 'express';
 import { routes } from './routes';
-import { errorMiddleware } from './errors/errorMiardo.comdleware';
+import { errorMiddleware } from './errors/errorMiddleware';
 
 const app = express();
 
