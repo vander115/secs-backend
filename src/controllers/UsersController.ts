@@ -1,9 +1,9 @@
 import { Request, Response } from 'express';
 import Zod from 'zod';
+import { hash } from 'bcrypt';
 
 import { prisma } from '../lib/prisma';
 import { AppError } from '../errors/AppError';
-import { hash } from 'bcrypt';
 
 export class UsersController {
   public async list(request: Request, response: Response) {
@@ -13,7 +13,6 @@ export class UsersController {
       users,
     });
   }
-
   public async create(request: Request, response: Response) {
     const bodySchema = Zod.object({
       name: Zod.string().min(3),

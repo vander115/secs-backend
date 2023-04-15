@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { ZodError } from 'zod';
-import { AppError } from './AppError';
+import { AppError } from '../errors/AppError';
 
 export async function errorMiddleware(
   error: Error,
